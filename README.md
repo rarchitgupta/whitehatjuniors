@@ -33,5 +33,5 @@ Settling on Mars hasn't been easy but we'll make sure you don't miss out on your
 
 ## Contributors
 
-- [@rarchitgupta](https://{github.com/rarchitgupta})
-- [@Shubhrmcf07](https://{github.com/Shubhrmcf07})
+- [@rarchitgupta](https://github.com/rarchitgupta)
+- [@Shubhrmcf07](https://github.com/Shubhrmcf07)
