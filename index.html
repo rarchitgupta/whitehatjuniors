@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Exodus Front-End">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fa4e25b22a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Exodus</title>
+</head>
+
+<body>
+    <header id="#home">
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+            <nav>
+                <h1 class="brand"><a href="index.html" class="nav-link"><i class="fas fa-video"></i>
+                        <span>EXODUS</span></a></h1>
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#nowshowing" class="nav-link">Now Showing</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container hero">
+            <h1 class="hero-title">The Planet may have changed</h1>
+            <h2 class="hero-subtitle"><span>The viewing experience doesn't have to</span></h2>
+        </div>
+
+    </header>
+    <main id="nowshowing">
+        <div class="neon-text">
+            <div id="code">N<span>O</span>W SH<span>O</span><span>WIN</span>G</div>
+        </div>
+        <input type="text" id="movieInput" onkeyup="moviesearch()" placeholder="Search for movies">
+        <ul class="page-content" id="movieList">
+            <li class="card">
+                <div class="content" id="movie">
+                    <h2 class="title">World War Z</h2>
+                    <button class="btn"><a href="moviedesc.html" onclick="updateMovie('World War Z')">Book
+                            Now</a></button>
+                </div>
+            </li>
+            <li class="card">
+                <div class="content" id="movie">
+                    <h2 class="title">Arrival</h2>
+                    <button class="btn"><a href="moviedesc.html" onclick="updateMovie('Arrival')">Book
+                            Now</a></button>
+                </div>
+            </li>
+            <li class="card">
+                <div class="content" id="movie">
+                    <h2 class="title">A Quiet Place</h2>
+                    <button class="btn"><a href="moviedesc.html" onclick="updateMovie('A Quiet Place')">Book
+                            Now</a></button>
+                </div>
+            </li>
+            <li class="card">
+                <div class="content" id="movie">
+                    <h2 class="title">Gravity</h2>
+                    <button class="btn"><a href="moviedesc.html" onclick="updateMovie('Gravity')">Book
+                            Now</a></button>
+                </div>
+            </li>
+            <li class="card">
+                <div class="content" id="movie">
+                    <h2 class="title">Interstellar</h2>
+                    <button class="btn"><a href="moviedesc.html" onclick="updateMovie('Interstellar')">Book
+                            Now</a></button>
+                </div>
+            </li>
+            <li class="card">
+                <div class="content" id="movie">
+                    <h2 class="title">Mad Max: Fury Road</h2>
+                    <button class="btn"><a href="moviedesc.html" onclick="updateMovie('Mad Max')">Book
+                            Now</a></button>
+                </div>
+            </li>
+            <li class="card">
+                <div class="content" id="movie">
+                    <h2 class="title">The Martian</h2>
+                    <button class="btn"><a href="moviedesc.html" onclick="updateMovie('The Martian')">Book
+                            Now</a></button>
+                </div>
+            </li>
+            <li class="card">
+                <div class="content" id="movie">
+                    <h2 class="title">Tenet</h2>
+                    <button class="btn"><a href="moviedesc.html" onclick="updateMovie('Tenet')">Book
+                            Now</a></button>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <h1 class="footer-title"><span>EXODUS</span></h1>
+        <p class="footer-text">Exodus Media Inc. All Rights Reserved</p>
+    </footer>
+    <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/moviesearch.js"></script>
+    <script type="text/javascript" src="js/updatemovie.js"></script>
+</body>
+
+</html>

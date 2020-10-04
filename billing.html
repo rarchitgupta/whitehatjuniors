@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Exodus Front-End" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/fa4e25b22a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/billingstyle.css" />
+    <title>Exodus</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+            <nav>
+                <h1 class="brand"><a href="index.html" class="nav-link"><i class="fas fa-video"></i>
+                        <span>EXODUS</span></a></h1>
+                <ul>
+                    <li><a href="#" class="nav-link">Add Ons</a></li>
+                    <li><a href="#" class="nav-link">Bill Breakdown</a></li>
+                </ul>
+            </nav>
+            <div class="neon-text">
+                <div id="code">P<span>IC</span>K Y<span>OU</span>R ADD<span>-O</span>NS</div>
+            </div>
+            <div class="page-content">
+                <div class="card">
+                    <div class="content">
+                        <h2 class="title">Large Popcorn</h2>
+                        <p class="copy">₹ 350</p>
+                        <div class="counter large-popcorn">
+                            <div class="down" onclick="decreaseCount(event,this,'largepopcorn')">-</div>
+                            <input type="text" value="0">
+                            <div class="up" onclick="increaseCount(event,this,'largepopcorn')">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <h2 class="title">Regular Popcorn</h2>
+                        <p class="copy">₹ 250</p>
+                        <div class="counter regular-popcorn">
+                            <div class="down" onclick="decreaseCount(event,this,'regularpopcorn')">-</div>
+                            <input type="text" value="0">
+                            <div class="up" onclick="increaseCount(event,this,'regularpopcorn')">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <h2 class="title">Coke</h2>
+                        <p class="copy">₹ 200</p>
+                        <div class="counter coke">
+                            <div class="down" onclick="decreaseCount(event,this,'coke')">-</div>
+                            <input type="text" value="0">
+                            <div class="up" onclick="increaseCount(event,this,'coke')">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <h2 class="title">Club Nachos</h2>
+                        <p class="copy">₹ 250</p>
+                        <div class="counter nachos">
+                            <div class="down" onclick="decreaseCount(event,this,'nachos')">-</div>
+                            <input type="text" value="0">
+                            <div class="up" onclick="increaseCount(event,this,'nachos')">+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="neon-text">
+            <div id="code">B<span>I</span>LL BRE<span>AK</span> D<span>O</span>WN</div>
+        </div>
+        <div class="billing">
+            <div class="entity">
+                Seats (x <span id="bill-ticket-count">0</span>)
+                <span style="float: right">₹ <span id="bill-tickets-price">0</span></span>
+            </div>
+            <br>
+            <div class="entity" id="addontitle">
+                <strong>Add-Ons</strong>
+            </div>
+            <br>
+            <ul class="entity add-ons" id="addonlist">
+                <li class="add-on" id="largepopcorn">
+                    Large Popcorn (x <span id="lpquantity">0</span>)
+
+                    <span style="float: right" id="lpprice">₹ 0</span>
+                </li>
+                <li class="add-on" id="regularpopcorn">
+                    Regular Popcorn (x <span id="rpquantity">0</span>)
+
+                    <span style="float: right" id="rpprice">₹ 0</span>
+                </li>
+                <li class="add-on" id="coke">
+                    Coke (x <span id="ccquantity">0</span>)
+
+                    <span style="float: right" id="ccprice">₹ 0</span>
+                </li>
+                <li class="add-on" id="nachos">
+                    Club Nachos (x <span id="cnquantity">0</span>)
+
+                    <span style="float: right" id="cnprice">₹ 0</span>
+                </li>
+            </ul>
+            </ul>
+            <br>
+            <hr />
+            <div class="entity">
+                <strong>Subtotal</strong>
+                <span style="float: right">₹ <span id="subtotal"></span></span>
+            </div>
+            <br>
+            <div class="entity">
+                <span style="cursor: pointer" onclick="taxBreakdown()">Taxes and Other Charges <i
+                        class="fas fa-caret-down"></i></span>
+
+                <div id="tax-breakdown">
+                    <div class="GST">
+                        GST
+
+                        <span style="float: right">₹ <span id="gst"></span></span>
+                    </div>
+                    <div class="service-tax">
+                        Service Tax
+
+                        <span style="float: right">₹ <span id="st"></span></span>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+            <br>
+            <div class="entity">
+                <strong>Grand Total</strong>
+                <span style="float: right">₹ <span id="gt"></span></span>
+            </div>
+            <div style="text-align: center;">
+                <button class="btn"><a href="./ticket.html">Pay Now</a></button>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="js/billing.js"></script>
+</body>
+
+</html>
